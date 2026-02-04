@@ -13,9 +13,6 @@
 # display_book_details() → shows only title and author
 # display_issued_book_details() → shows title, author, issued_to, issued_date
 
-#  (it calls display_book_details() from the parent class using inheritance)
-
-
 # Create one object of IssuedBook and display all details.
 # Push daily progress to GitHub.
 
@@ -28,18 +25,20 @@ class Book:
         print(f"Book Title: {self.title}")
         print(f"Author: {self.author}")
 
-#now child class
-class issuedBook(Book):
+# now child class
+class IssuedBook(Book):
     def __init__(self, title, author, issued_to, issued_date):
-        super().__init__(title, author)  # Call the constructor of the parent class
+        super().__init__(title, author)
         self.issued_to = issued_to
         self.issued_date = issued_date
 
-    def display_issued_book_details(self):
-        self.display_book_details()  # Call the method from the parent class
+    def display_issued_book_details(self):  #  (it calls display_book_details() from the parent class using inheritance)
+        self.display_book_details()
         print(f"Issued To: {self.issued_to}")
         print(f"Issued Date: {self.issued_date}")
 # Create an object of IssuedBook
-issued_book = issuedBook("the girl", "jenny", "anu", "2026-02-4")
+issued_book = IssuedBook("the girl", "jenny", "anu", "2026-02-4")
 # Display all details
 issued_book.display_issued_book_details()
+# Output:
+# Book Title:

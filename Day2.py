@@ -66,7 +66,7 @@ reel1.display_comment()
 reel1.add_comment("good dance moves")
 reel1.add_comment("Loved it")
 reel1.add_comment("Awesome performance")
-reel1.add_comment("Great rhythm")
+reel1.add_comment("Great video")
 
 reel1.delete_last_comment()
 reel1.display_comment()
