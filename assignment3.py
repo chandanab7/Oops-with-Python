@@ -1,3 +1,19 @@
+# Task 2: Multiple Inheritance Program
+# Problem Statement
+# Create a program for a Smartphone System using Multiple Inheritance.
+# Create a class Camera
+# attribute: camera_quality
+# method: display_camera_details()
+# Create a class MusicPlayer
+# attribute: sound_quality
+# method: display_music_details()
+# Create a child class SmartPhone that inherits from both Camera and MusicPlayer
+# attribute: brand
+# method: display_smartphone_details()
+# Create one object of SmartPhone and display all details.
+# Multiple Inheritance Example
+
+
 class Camera:
     def __init__(self, camera_quality):
         self.camera_quality = camera_quality

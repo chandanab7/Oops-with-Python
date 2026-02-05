@@ -1,3 +1,29 @@
+
+# Task 3 : Multilevel Inheritance Program – Online Shopping System
+# Problem Statement
+# Create a program for an Online Shopping System using Multilevel Inheritance.
+# Requirements
+# Parent Class: Product
+# Attributes:
+# product_name
+# price
+# Method:
+# display_product()
+# Child Class: ElectronicProduct (inherits from Product)
+# Attributes:
+# brand
+# warranty
+# Method:
+# display_electronic_product()
+# Grandchild Class: MobilePhone (inherits from ElectronicProduct)
+# Attributes:
+# ram
+# storage
+# Method:
+# display_mobile_details()
+# Create one object of MobilePhone and display all details.
+
+# Multi-level Inheritance Example
 #online shopping system
 class Product:
     def __init__(self, product_name, price):
