@@ -37,12 +37,12 @@
 
 class InstagramAccount:
     # Public variable
-    account_name = ""
+    account_name = "" #class variable meaning it is shared among all objects of the class
 
     def __init__(self, account_name, password):
         self.account_name = account_name
         # Protected variable
-        self._private_reels = []
+        self._private_reels = [] #instance variable meaning it is specific to each object of the class
         # Private variable
         self.__archived_reels = []
         self.__password = password

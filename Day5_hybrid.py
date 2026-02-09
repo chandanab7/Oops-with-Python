@@ -24,6 +24,15 @@
 # Create one object of CollegeStudent and display all details.
 
 
+
+# hybrid inheritance is a combination of multiple and hierarchical inheritance. In this example, 
+# we have a base class `Person`, two derived classes `Student` and `SportsPlayer` that inherit from `Person`,
+# and a further derived class `CollegeStudent` that inherits from both `Student` and `SportsPlayer`. 
+# This allows us to create a college student who has attributes and methods from both the student and 
+# sports player classes, as well as the person class.
+from unicodedata import name
+
+
 class Person:
     def __init__(self, name):
         self.name = name
@@ -43,7 +52,7 @@ class Student(Person):
 
 class SportsPlayer(Person):
     def __init__(self, name, sport_name):
-        Person.__init__(self, name)
+        Person.__init__(self,name)
         self.sport_name = sport_name
 
     def display_sports_player(self):
@@ -52,7 +61,6 @@ class SportsPlayer(Person):
 
 class CollegeStudent(Student, SportsPlayer):
     def __init__(self, name, student_id, sport_name, college_name):
-        Person.__init__(self, name)
         Student.__init__(self, name, student_id)
         SportsPlayer.__init__(self, name, sport_name)
         self.college_name = college_name
@@ -60,9 +68,7 @@ class CollegeStudent(Student, SportsPlayer):
     def display_college_student(self):
         print("College Name:", self.college_name)
 
-
-# Object creation
-college_student = CollegeStudent("Alice", "S123", "Basketball", "XYZ College")
+college_student = CollegeStudent("pari", "12345", "badminton", "XYCollege")
 
 college_student.display_person()
 college_student.display_student()
